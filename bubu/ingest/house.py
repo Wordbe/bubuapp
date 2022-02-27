@@ -1,13 +1,15 @@
 class House:
     def __init__(self,
-                 address,
-                 area,
-                 sales_price,
-                 jeonse_price,
-                 households_count,
-                 approval_date,
-                 floor_area_ratio):
+                 address: str,
+                 title: str,
+                 area: str,
+                 sales_price: str,
+                 jeonse_price: str,
+                 households_count: str,
+                 approval_date: str,
+                 floor_area_ratio: str):
         self.address = address
+        self.title = title
         self.area = area
         self.sales_price = sales_price
         self.jeonse_price = jeonse_price

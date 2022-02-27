@@ -56,7 +56,10 @@ def search() -> House:
         floor_area_ratio = driver.find_element(by=By.CSS_SELECTOR,
                                                value="#detailContents1 > div.detail_box--complex > table > tbody > tr:nth-child(3) > td:nth-child(2)").text
 
-        return House(address, area, sales_price, jeonse_price, households_count, approval_date, floor_area_ratio)
+        # 제목
+        title = driver.find_element(by=By.CSS_SELECTOR, value="#complexTitle").text
+
+        return House(address, title, area, sales_price, jeonse_price, households_count, approval_date, floor_area_ratio)
 
     finally:
         driver.quit()
